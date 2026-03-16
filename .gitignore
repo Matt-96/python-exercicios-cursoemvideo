@@ -1,0 +1,14 @@
+# Ambientes Virtuais (Pesados e específicos da sua máquina)
+.venv/
+venv/
+env/
+
+# Configurações do PyCharm (Contém caminhos do seu Windows)
+.idea/
+
+# Arquivos temporários do Python
+__pycache__/
+*.py[cod]
+
+# Pastas duplicadas ou desnecessárias que você já moveu
+ExerciciosPython/
