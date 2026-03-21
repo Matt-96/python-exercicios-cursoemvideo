@@ -1,4 +1,5 @@
 from colorama import init, Fore
+from Mundo_3.ex113.funções_matematicas import *
 init(autoreset=True)
 def linha():
     print('-' * 50)
@@ -8,10 +9,17 @@ def cabecalho(msg):
     linha()
 
 
-def menu():
+def menu(lista):
     cabecalho('MENU PRINCIPAL')
-
-    print(Fore.YELLOW + '1','-', Fore.BLUE + 'Ver Pessoas Cadastradas')
-    print(Fore.YELLOW + '2', '-', Fore.BLUE + 'Cadastrar Nova Pessoa')
-    print(Fore.YELLOW + '3', '-', Fore.BLUE + 'Sair do Sistema')
+    c = 1
+    for item in lista:
+        print(Fore.YELLOW + f'{c}', '-',Fore.BLUE + f'{item}')
+        c+=1
     linha()
+    opc = leiaInt(Fore.GREEN + 'Sua opção:')
+    return opc
+
+
+
+
+

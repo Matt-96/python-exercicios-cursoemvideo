@@ -1,19 +1,20 @@
 from interface import menu, cabecalho
-from Mundo_3.ex113.funções_matematicas import leiaInt
-from colorama import init, Fore
 from time import sleep
-
+from colorama import init, Fore
 init(autoreset=True)
+
 while True:
-    sleep(1)
-    menu()
-    opc = leiaInt(Fore.GREEN + 'Sua Opção:')
-    if opc == 1:
+    sleep(2)
+    resposta = menu(['Ver Pessoas Cadastradas','Cadastrar Nova Pessoa', 'Sair do Sistema'])
+    if resposta == 1:
         cabecalho('OPÇÃO 1')
-    elif opc == 2:
+    elif resposta == 2:
         cabecalho('OPÇÃO 2')
-    elif opc == 3:
-        cabecalho('Saindo do sistema... Até logo!')
+    elif resposta == 3:
+        cabecalho('Saindo do Sistema ... Até logo!')
         break
     else:
-        print(Fore.RED + 'Digite uma opção válida.')
+        print(Fore.RED +  'Digite uma opção válida!')
+
+
+
